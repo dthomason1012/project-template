@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/hello', (req, res) => {
+router.get('/', (req, res) => {
   try {
     res.status(200).send({ message: 'Hello World!' });
   } catch (error) {
