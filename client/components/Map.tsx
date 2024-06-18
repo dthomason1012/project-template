@@ -15,8 +15,7 @@ export const MapComponent: React.FC = () => {
   ];
 
   useEffect(() => {
-    mapboxgl.accessToken =
-      'pk.eyJ1IjoiZHRob21hc29uMTAxMiIsImEiOiJjbHhraXd5MmMwMjFzMmpwd3F5MTI3djE5In0.x-8v4raA8Hr5LT0pdy9Nuw';
+    mapboxgl.accessToken = process.env.MAPBOX_TOKEN as string;
     if (mapContainer.current) {
       const map = new mapboxgl.Map({
         container: mapContainer.current,
